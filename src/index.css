@@ -1361,6 +1361,7 @@ body.modal-open {
     gap: 6px;
     bottom: 12px;
     border-radius: 20px;
+    overflow: visible;
   }
 
   .notch-item {
