@@ -3,7 +3,6 @@ import {
   AirbnbMark,
   AirbnbModalMark,
   AntigravityLogo,
-  BrandLogo,
   ChatGPTMark,
   ClaudeLogo,
   CursorAIIcon,
@@ -18,6 +17,7 @@ import {
   InstagramIcon,
   LinkedInIcon,
   LocationIcon,
+  LovableLogo,
   SoundOff,
   SoundOn,
   UbdMark,
@@ -321,7 +321,7 @@ const ProfileCard = () => {
                 <FigmaLogo /> <span>Figma</span>
               </div>
               <div className="tool-item">
-                <BrandLogo /> <span>Brand</span>
+                <LovableLogo /> <span>Lovable</span>
               </div>
               <div className="tool-item">
                 <CursorLogo /> <span>Cursor</span>
@@ -374,7 +374,7 @@ const ProfileCard = () => {
         <div className="notch-item" data-tooltip="Figma"><FigmaDarkLogo /></div>
         <div className="notch-item" data-tooltip="Cursor"><CursorAIIcon /></div>
         <div className="notch-item" data-tooltip="Antigravity"><AntigravityLogo /></div>
-        <div className="notch-item" data-tooltip="Brand"><BrandLogo /></div>
+        <div className="notch-item" data-tooltip="Lovable"><LovableLogo /></div>
         <div className="notch-item" data-tooltip="Claude"><ClaudeLogo /></div>
       </div>
 

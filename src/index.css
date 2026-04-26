@@ -1155,11 +1155,22 @@ body.modal-open {
     gap: 8px;
     bottom: 16px;
     border-radius: 24px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    justify-content: flex-start;
+  }
+
+  .notch-content::-webkit-scrollbar {
+    display: none;
   }
 
   .notch-item {
     width: 56px;
     height: 56px;
+    flex-shrink: 0;
   }
 
   /* Dock lift on tap — matches hover effect */
@@ -1355,6 +1366,7 @@ body.modal-open {
   .notch-item {
     width: 48px;
     height: 48px;
+    flex-shrink: 0;
   }
 
   /* --- Skill Notch: Small Mobile — Horizontal Scroll --- */
