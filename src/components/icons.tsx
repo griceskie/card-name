@@ -10,6 +10,7 @@ import ikeaLogoUrl from "@/assets/ikea-logo.svg";
 import ubdLogoUrl from "@/assets/ubd-logo 1.svg";
 import antigravityLogoUrl from "@/assets/antigravity-color 1.svg";
 import lovableLogoUrl from "@/assets/Lovable_Symbol_0 1.svg";
+import brandLogoUrl from "@/assets/brand-logo.png";
 import figmaDarkLogoUrl from "@/assets/Figma-Dark logo.svg";
 import cursorAIIconUrl from "@/assets/cursor-ai-code-icon 1.svg";
 import linkedinIconUrl from "@/assets/linkedin-01.svg";
@@ -75,6 +76,10 @@ export const FigmaLogo = ({ width = 16, height = 16, ...rest }: ImgIconProps) =>
 
 export const LovableLogo = ({ width = 16, height = 16, ...rest }: ImgIconProps) => (
   <img src={lovableLogoUrl} alt="Lovable" width={width} height={height} {...rest} />
+);
+
+export const BrandLogo = ({ width = 16, height = 16, ...rest }: ImgIconProps) => (
+  <img src={brandLogoUrl} alt="Brand" width={width} height={height} {...rest} />
 );
 
 export const CursorLogo = ({ width = 16, height = 16, ...rest }: ImgIconProps) => (

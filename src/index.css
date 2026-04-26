@@ -1151,15 +1151,15 @@ body.modal-open {
   .notch-content {
     width: calc(100% - 32px);
     height: auto;
-    padding: 16px;
-    gap: 12px;
+    padding: 16px 12px;
+    gap: 8px;
     bottom: 16px;
     border-radius: 24px;
   }
 
   .notch-item {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
   }
 
   /* Dock lift on tap — matches hover effect */
@@ -1199,18 +1199,18 @@ body.modal-open {
 
   .skill-notch-item {
     flex: 0 0 auto;
-    width: 140px;
-    min-width: 140px;
-    border-radius: 12px;
+    width: 160px;
+    min-width: 160px;
+    border-radius: 16px;
   }
 
   .skill-notch-image {
-    height: 90px;
+    height: 110px;
   }
 
   .skill-notch-text {
-    font-size: 12px;
-    padding: 12px;
+    font-size: 14px;
+    padding: 14px;
   }
 
   .skill-notch-item:hover {
@@ -1346,15 +1346,15 @@ body.modal-open {
 
   .notch-content {
     width: calc(100% - 24px);
-    padding: 12px;
-    gap: 8px;
+    padding: 12px 8px;
+    gap: 6px;
     bottom: 12px;
     border-radius: 20px;
   }
 
   .notch-item {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
 
   /* --- Skill Notch: Small Mobile — Horizontal Scroll --- */
@@ -1369,17 +1369,17 @@ body.modal-open {
 
   .skill-notch-item {
     flex: 0 0 auto;
-    width: 120px;
-    min-width: 120px;
+    width: 140px;
+    min-width: 140px;
   }
 
   .skill-notch-image {
-    height: 72px;
+    height: 90px;
   }
 
   .skill-notch-text {
-    font-size: 11px;
-    padding: 10px;
+    font-size: 12px;
+    padding: 12px;
   }
 
   .project-modal-overlay {
