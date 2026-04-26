@@ -192,6 +192,40 @@ const ProfileCard = () => {
     }
   };
 
+  // Drag-to-dismiss (mobile pill gesture)
+  const dragStartY = useRef<number | null>(null);
+  const [dragDeltaY, setDragDeltaY] = useState(0);
+  const isDragging = useRef(false);
+
+  const onHeaderTouchStart = (e: React.TouchEvent) => {
+    // Only allow drag-to-dismiss when modal is at scroll-top
+    if (modalRef.current && modalRef.current.scrollTop > 0) return;
+    dragStartY.current = e.touches[0].clientY;
+    isDragging.current = false;
+  };
+
+  const onHeaderTouchMove = (e: React.TouchEvent) => {
+    if (dragStartY.current === null) return;
+    const delta = e.touches[0].clientY - dragStartY.current;
+    // Only track downward drag
+    if (delta > 0) {
+      isDragging.current = true;
+      setDragDeltaY(delta);
+    }
+  };
+
+  const onHeaderTouchEnd = () => {
+    if (dragStartY.current === null) return;
+    if (isDragging.current && dragDeltaY > 100) {
+      // Threshold reached — close modal
+      closeModal();
+    }
+    // Reset
+    dragStartY.current = null;
+    isDragging.current = false;
+    setDragDeltaY(0);
+  };
+
   const notchClass =
     toolsState === "active"
       ? "notch-content notch-visible"
@@ -365,8 +399,18 @@ const ProfileCard = () => {
           ref={modalRef}
           className={`project-modal${modalExpanded ? " expanded" : ""}`}
           onScroll={onModalScroll}
+          style={dragDeltaY > 0 ? {
+            transform: `translateY(${dragDeltaY}px)`,
+            opacity: Math.max(0.2, 1 - dragDeltaY / 300),
+            transition: 'none',
+          } : undefined}
         >
-          <div className="project-modal-header">
+          <div
+            className="project-modal-header"
+            onTouchStart={onHeaderTouchStart}
+            onTouchMove={onHeaderTouchMove}
+            onTouchEnd={onHeaderTouchEnd}
+          >
             <div className="traffic-light">
               <button className="traffic-dot red" aria-label="Close" data-tooltip="Close" onClick={closeModal} />
               <button className="traffic-dot yellow" aria-label="Minimize" data-tooltip="Minimize" onClick={minimizeModal} />
