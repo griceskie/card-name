@@ -352,7 +352,7 @@ const ProfileCard = () => {
 
           {/* Actions */}
           <div className="action-content">
-            <a href="https://drive.google.com/file/d/15VuRvFxnNjngOREHTvxt_q-UfgEypaTc/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="action-btn action-cv">
+            <a href="https://drive.google.com/file/d/19RUCFnw62L97CWlJKNS69slDi8y0CO-r/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="action-btn action-cv">
               <CVIcon />
               <span>Read my CV</span>
             </a>
