@@ -1,0 +1,10 @@
+<svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue background -->
+  <rect width="1080" height="1080" fill="#0052FF"/>
+  
+  <!-- Top right shape: arc + diagonal -->
+  <path d="M 275 275 L 595 275 Q 685 275 685 410 Q 685 545 595 545 L 275 545 Z" fill="white" transform="skewY(-15)"/>
+  
+  <!-- Bottom left shape: diagonal parallelogram -->
+  <path d="M 275 545 L 825 545 L 595 815 L 275 815 Z" fill="white" transform="skewX(10)"/>
+</svg>
